@@ -6,7 +6,7 @@ LOOP:   jmp L1(#4,r6)
             sub r1, r4
             bne END 
         endmcr
-        prn #-5
+        prn #-50
         bne LOOP(r4,r3) 
         ml
 L1:     inc K

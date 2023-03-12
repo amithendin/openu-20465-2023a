@@ -86,9 +86,8 @@ void instruction_to_bin(long ic, HashTable *labels, char *opcode, char *operands
     char *operand;
     SymbolData *label_data;
     byte operands_type[3]; /*save important type info*/
-    unsigned long opcode_len; /*just to use get_opcode function correctly*/
 
-    bin_opcode = get_opcode(opcode, &opcode_len);
+    bin_opcode = get_opcode(opcode);
 
     for (k = 0;
          k < num_operands; k++) { /*convert operands to integer form so we can send them to int_to_bin for encoding*/

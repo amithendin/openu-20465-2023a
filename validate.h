@@ -17,7 +17,7 @@
 #include "list.h"
 #include "parse.h"
 
-#define ERR_SIZE 250 /*size of the string containing the error message*/
+#define ERR_SIZE 500 /*size of the string containing the error message*/
 
 /**
  * Checks that all tokens in given list constitute a valid assembly line.
@@ -32,12 +32,11 @@ void validate_tokens(List *tokens, char *err);
 
 /**
  * Checks that *!marco expanded!* code file has valid syntax.
- * If there is a syntax error, fill error string pointer with error description.
- * If error string remains empty of execution then the code is valid
+ * If there is a syntax error, print error description and set is_valid flag to 0.
  *
  * @param code_file_path path to the .am *!marco expanded!* code file
- * @param err a string pointer in which to fill the description of the error in the code
+ * @param is_valid a byte reference to put the is_valid flag in
  */
-void validate_code(const char *code_file_path, char *err);
+void validate_code(const char *code_file_path, byte *is_valid);
 
 #endif /* VALIDATE_H_ */

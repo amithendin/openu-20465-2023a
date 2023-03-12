@@ -73,8 +73,7 @@ List *tokenize(char *line) {
     return tokens;
 }
 
-int get_opcode(char *opcode, unsigned long *len) {
-    *len = 3; /*assume not stop opcode*/
+int get_opcode(char *opcode) {
     /*convert opcode to int using simple if-else-if logic*/
     if (strncmp(opcode, "mov", 3) == 0) {
         return 0;
@@ -122,7 +121,6 @@ int get_opcode(char *opcode, unsigned long *len) {
         return 14;
 
     } else if (strncmp(opcode, "stop", 4) == 0) {
-        *len = 4;
         return 15;
 
     } else {

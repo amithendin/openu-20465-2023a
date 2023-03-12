@@ -28,10 +28,9 @@ List* tokenize(char* line);
  * the spec in the assignment
  *
  * @param opcode opcode string rep
- * @param len a reference to a length of opcode string to set
  * @return the opcode integer rep. returns -1 if undefined opcode string is provided
  */
-int get_opcode(char* opcode, unsigned long *len);
+int get_opcode(char* opcode);
 
 /**
  * Converts operand token from source code form to type value
